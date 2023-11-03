@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Card layout</title>
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+  </head>
+  <body>
+    <header id="header">
+      <div id="logo-and-site-name">
+        <a href="#">
+          <img id="logo" src="images/placeholder.svg" alt="Cats 'n' Hats logo" width="80">
+          <h2 id="site-name">Cats 'n' Hats</h2>
+        </a>
+      </div>
+      <nav id="main-nav">
+        <ul class="inline-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop now</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <h1 class="page-title">Shop all products</h1>
+      <div class="page-content">
+        <div id="products" class="products-list-container">
+          <div class="products-list">
+            <div class="product-card">
+              <a href="#">
+                <h2 class="product-name">Product</h2>
+                <img src="images/placeholder.svg" alt="Product close-up" width="100"> <!-- using width so there is a default size on page load -->
+                <div class="price">$25.99</div>
+              </a>
+            </div>
+            <div class="product-card new">
+              <a href="#">
+                <h2 class="product-name">Product</h2>
+                <img src="images/placeholder.svg" alt="Product close-up" width="100"> <!-- using width so there is a default size on page load -->
+                <div class="price">$13.49</div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="#">
+                <h2 class="product-name">Product</h2>
+                <img src="images/placeholder.svg" alt="Product close-up" width="100"> <!-- using width so there is a default size on page load -->
+                <div class="price">$48.99</div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="#">
+                <h2 class="product-name">Product</h2>
+                <img src="images/placeholder.svg" alt="Product close-up" width="100"> <!-- using width so there is a default size on page load -->
+                <div class="price">$5.49</div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="#">
+                <h2 class="product-name">Product</h2>
+                <img src="images/placeholder.svg" alt="Product close-up" width="100"> <!-- using width so there is a default size on page load -->
+                <div class="price">$98.99</div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="#">
+                <h2 class="product-name">Product</h2>
+                <img src="images/placeholder.svg" alt="Product close-up" width="100"> <!-- using width so there is a default size on page load -->
+                <div class="price">$40.99</div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="#">
+                <h2 class="product-name">Product</h2>
+                <img src="images/placeholder.svg" alt="Product close-up" width="100"> <!-- using width so there is a default size on page load -->
+                <div class="price">$10.99</div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="#">
+                <h2 class="product-name">Product</h2>
+                <img src="images/placeholder.svg" alt="Product close-up" width="100"> <!-- using width so there is a default size on page load -->
+                <div class="price">$23.49</div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="#">
+                <h2 class="product-name">Product</h2>
+                <img src="images/placeholder.svg" alt="Product close-up" width="100"> <!-- using width so there is a default size on page load -->
+                <div class="price">$28.99</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <aside id="sidebar">
+          <form id="filters" method="get">
+            <h2>Filter products by</h2>
+            <fieldset>
+              <legend>Category</legend>
+              <div>
+                <input type="checkbox" id="hats" name="category" value="hats">
+                <label for="hats">Hats<label>
+              </div>
+              <div>
+                <input type="checkbox" id="scarves" name="category" value="scarves">
+                <label for="scarves">Scarves<label>
+              </div>
+              <div>
+                <input type="checkbox" id="capes" name="category" value="capes">
+                <label for="capes">Capes<label>
+              </div>
+            </fieldset>
+            <button type="submit">Apply filters</button>
+          </form>
+        </aside>
+      </div>
+    </main>
+    <footer id="footer">
+      <nav id="footer-nav">
+        <ul class="inline-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+  <!-- 
+    IMAGE SOURCES:
+    * https://freesvg.org/graphic-placeholder
+    * https://www.peakpx.com/en/hd-wallpaper-desktop-nwmiu/download/1920x1080
+    *
+  -->
+</html>

@@ -1,0 +1,104 @@
+/* Styling for the header */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: #2b0404;
+  padding: 10px;
+  margin-left: 21px;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Styling for the title on the left */
+.header-left {
+  flex: 1; /* Takes up available space */
+  font-size: 32px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling for the menu items on the right */
+.header-right {
+  flex: 0; /* Do not grow, fixed size */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Make the <ul> a flex container */
+}
+
+nav ul li {
+  margin-right: 78px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #2b0404;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+nav ul li a:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+/* Style for the full-width image */
+.full-width-image {
+  width: 100%; /* Make the image span the full width of its container */
+  display: block; /* Remove any default inline spacing */
+}
+
+/* Container for the image and overlay content */
+.image-container {
+  position: relative;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 50%; /* Vertically center the overlay */
+  left: 50%; /* Horizontally center the overlay */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Center the overlay both horizontally and vertically */
+  text-align: center;
+  padding: 20px; /* Add padding to the overlay */
+  border-radius: 5px; /* Add rounded corners */
+  color: #fff; /* Text color for the overlay content */
+}
+
+/* Style for the new title within the overlay */
+.image-overlay h2 {
+  font-size: 64px;
+  margin-bottom: 28px;
+}
+
+/* Style for the button within the overlay */
+.image-overlay .button {
+  font-size: 20px;
+  width: 226px;
+  height: 63px;
+  border-radius: 36px;
+  border: solid #ad00ff 5px;
+  background-color: white;
+  color: #ad00ff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex; /* Display the button as a flex container */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+footer {
+  font-size: 14px;
+  margin-left: 21px;
+  margin-top: 13px;
+}

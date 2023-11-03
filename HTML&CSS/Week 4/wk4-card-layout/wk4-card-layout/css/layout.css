@@ -1,0 +1,214 @@
+/******************************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * I have CSS comments which follow the same formatting as the 
+ * the table of contents entries so you can easily jump to the
+ * styling rules you want. Select the entry text (after the *),
+ * then do a simple Find (Ctrl+F for Windows, * Cmd+F for Mac).
+ *
+ * 1. DEFAULTS
+ * 2. HEADER
+ * -- 2a. Flexbox stuff
+ * -- 2b. Logo and site name
+ * 3. MENUS
+ * -- 3a. Site nav
+ * ---- 3i. Nav flexbox stuff
+ * 4. PAGES/SECTIONS
+ * -- 4a. Product listing
+ * ---- 4i. Product listing flex
+ * 5. FOOTER
+ */ 
+
+/* Normally, styles for the same elements would go in the same rule
+ * to make them easier to find, but here, I have separated out
+ * the flexbox stuff so you can see where it's actually used.
+ *
+ * When you style, you can put all properties for the same
+ * selector in the same rule.
+ */
+
+/* 1. DEFAULTS */
+body {
+  margin:0;
+  padding:1em; /* a gap all around */
+  font-family:Futura,"Century Gothic", AppleGothic, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight:normal;
+  font-family:Garamond, "Hoefler Text", "Times New Roman", Times, serif;
+}
+input, button {
+  font-family:Futura,"Century Gothic", AppleGothic, sans-serif;
+}
+button {
+  background-color:#000;
+  color:#fff;
+  padding:1em;
+  text-transform:uppercase;
+  border:none;
+}
+button:hover {
+  background-color:#127472;
+}
+.page-content {
+  padding:1em;
+}
+
+/* 2. HEADER */
+#header {
+  text-transform:uppercase;
+  border-bottom:1px solid #000;
+}
+
+/* -- 2a. Flexbox stuff */
+#header {
+  padding:1em 1em 0.5em 1em; /* not specifically flex stuff */
+
+  display:flex;
+  flex-direction:column;
+  align-items:center; /* for a column align-items will center horizontally */
+  justify-content:space-evenly;
+  gap:2em;
+}
+/* It's useful to set borders on flex items while styling to
+ * help you see what you're doing.
+ */
+/* #header > * {
+  border:1px solid #000;
+} */
+
+/* -- 2b. Logo and site name */
+#logo-and-site-name {
+  text-align:center; /* alternatively, set this as a column flex container */
+}
+#site-name {
+  margin:0; /* remove default heading margin */
+  
+}
+#logo-and-site-name a {
+  color:#000;
+  text-decoration:none;
+}
+
+/* 3. MENUS */
+#main-nav {
+  width:100%; /* make the NAV fill the column flex container (#header) */
+}
+.inline-menu a {
+  color:#000;
+  text-decoration:none; /* no underline */
+}
+.inline-menu a:hover {
+  color:#127472;
+}
+
+/* -- 3a. Site nav */
+.inline-menu {
+  list-style:none; /* set UL to have no bullet points */
+  padding:5px 0;
+  margin:0;
+  text-transform:uppercase; /* display in all caps */
+}
+/* ---- 3i. Nav flexbox stuff */
+.inline-menu {
+  display:flex;
+  flex-flow:row nowrap;
+  gap:4em;
+  justify-content:center;
+
+}
+
+/* 4. PAGES/SECTIONS */
+h1.page-title {
+  background:url(../images/cat-in-hat.jfif) 50% 80%; /* center image horizontally, focus 80% down in the image */
+  background-size:cover;
+  text-align:center;
+  color:#fff; /* white text */
+  font-size:3em;
+  padding:1em 1em; /* add top/bottom padding of 2em to make the heading taller */
+  text-shadow:2px 2px 5px rgba(0,0,0,0.8);
+  margin-top:5px; /* make margin above H1 small */
+}
+#sidebar {
+  font-size:0.9em;
+}
+
+/* -- 4a. Product listing */
+#filters {
+  accent-color:#127472; /* new CSS3 property to style default color for radio button/checkbox */
+}
+#filters h2 {
+  text-transform:uppercase;
+}
+fieldset {
+  border:1px solid #ccc;
+  text-transform:uppercase;
+  margin-bottom:1em;
+}
+#filters legend {
+  font-weight:bold;
+}
+#filters div {
+  /* space out form field wrapper divs */
+  margin:0.8em 0;
+}
+.product-card {
+  border:1px solid #ccc;
+}
+.product-card:hover {
+  border-color:#127472;
+}
+.product-card a {
+  color:#000;
+  text-decoration:none;
+  padding:10px;
+}
+.product-card a:hover {
+  /* color:#fff; */
+  box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+}
+.product-name {
+  border-bottom:1px solid #000;
+  font-size:1.3em;
+}
+
+/* ---- 4i. Product listing flex */
+.page-content {
+  display:flex;
+  flex-flow:row wrap;
+  gap:1.5em;
+}
+.products-list-container {
+  flex:1 0 0; /* grow to fill */
+}
+#sidebar {
+  flex:0 0 200px;
+  order:-1;
+}
+.products-list {
+  display:flex;
+  flex-flow:row wrap;
+  gap:1em;
+  align-content:flex-start;
+}
+.product-card {
+  flex-basis:180px;
+}
+.product-card a {
+  display:flex;
+  flex-direction:column;
+  row-gap:20px;
+}
+.product-card img {
+  /* img is a flex of a (flex container, see above) so I can use order */
+  order:-1;
+  align-self:center; /* only tweak this one to be centered */
+}
+
+
+
+/* 5. FOOTER */
+#footer {
+  padding:0.5em 1em 1em 1em;
+  border-top:1px solid #000;
+}

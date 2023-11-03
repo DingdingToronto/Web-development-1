@@ -1,0 +1,86 @@
+.flex-container-row,
+.flex-container-column,
+.flex-item {
+  border:1px solid #000;
+}
+.flex-container-row, .flex-container-column {
+  background-color:#c498ff; /* so flex container is easily visible */
+}
+
+.flex-container-row {
+  /* padding:1em; */
+  display:flex;
+  /* flex-direction:row;
+  flex-wrap:wrap; */
+  flex-flow:row wrap; /* better compatibility across browsers */
+  /* justify-content:flex-start; */
+  /* align-items:flex-start; */
+  gap:1em 2em; /* <row-gap> <column-gap> */
+}
+.flex-item {
+  background-color:#fdd489; /* so flex item is easily visible */
+  /* flex-grow:1; */
+  /* flex-shrink:1; */
+  /* flex-basis:0; */
+  flex:1 1 0; /* <flex-grow> <flex-shrink> <flex-basis> */
+}
+.flex-item:nth-child(3) {
+  order:1;
+  flex-grow:2;
+}
+.flex-item:nth-child(4) {
+  order:-1;
+}
+
+/* LAYOUT EXAMPLE */
+#header, #site-name, #main-navigation, #main, #sidebar-one,
+#sidebar-two, #footer {
+  border:1px dashed #000;
+}
+#header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  height:100px;
+}
+#site-name {
+  margin:0;
+}
+
+/* menu */
+.menu {
+  display:flex;
+  list-style:none;
+  gap:2em;
+
+  margin:0;
+  padding:0;
+}
+
+/* layout */
+.layout-container {
+  display:flex;
+  gap:1em;
+  flex-wrap:wrap;
+}
+#main {
+  flex-grow:2;
+  /* flex-shrink:0; */
+  flex-basis:0;
+}
+#sidebar-one, #sidebar-two {
+  flex-basis:0;
+  flex-grow:1;
+  /* flex-shrink:0; */
+}
+#sidebar-one {
+  order:-1;
+}
+
+.image-left {
+  float:left;
+  margin:1em;
+}
+.section-break {
+  clear:both; /* left | right | both */
+}

@@ -1,0 +1,60 @@
+#flex-1,
+#flex-2 {
+  margin: 1em 0;
+  background-color: purple;
+}
+
+.item {
+  background-color: yellow;
+  padding: 30px;
+}
+
+/* FLEX 1 */
+#flex-1 {
+  max-width: 500px;
+  height: 300px;
+  display: flex; /* Make this a flex container */
+  flex-direction: row; /* It's a row */
+  justify-content: space-between; /* Spaced out */
+  align-items: center; /* Vertically centered */
+}
+.item:nth-child(2) {
+  align-self: flex-end; /* Align items to flex-end */
+}
+
+/* FLEX 2 */
+#flex-2 {
+  padding: 1em;
+  display: flex; /* Make this a flex container */
+  flex-direction: row; /* It's a row */
+  flex-wrap: wrap; /* Row can break to a new line */
+  gap: 1em;
+}
+
+.double {
+  padding: 1em;
+  background-color: yellow;
+  flex-grow: 2;
+  flex-basis: 0;
+}
+.single {
+  padding: 1em;
+  background-color: yellow;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+#nested-flex {
+  background-color: #bfa0bf;
+  padding: 1em;
+  display: flex; /* Make this a flex container */
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: orange;
+  height: 150px;
+  flex-basis: 100px; /* Default width of 100px */
+  flex-grow: 0; /* No additional growth needed */
+}
